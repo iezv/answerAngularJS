@@ -1,0 +1,21 @@
+html{
+	background: #708090;
+	height: 100%;
+}
+
+body {
+	font-family: 'Source Sans Pro', sans-serif;
+	background: transparent;
+   padding-bottom: 40px;
+
+}
+img {
+  display: inline-block;
+  height: auto;
+  max-width: 100%;
+}
+.container{
+	margin-left: 40px;
+	margin-right: 40px;
+	text-align: center;
+}

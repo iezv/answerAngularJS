@@ -1,0 +1,100 @@
+<div class="container-fluid">
+       <div>
+        <div class="row myrow">
+          <div class = "col-md-10 col-md-offset-1 col-xs-12 text-center">
+            <div class="bubble-left">   
+              <div><h1>{{ question.title }}</h1></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row myrow" ng-show="{{question.questionType}}==0 && question.answerblock">
+          <div class = "col-md-10 col-md-offset-1 col-xs-12 text-center">
+            <div class="bubble-right">    
+              <button type="button" class="btn btn-primary btt" ng-click="showNextQuestion(0)">OK</button>
+              <img class="ticks" ng-hide="question.ticks" src="img/ticks.png" alt="ticks">
+            </div>
+            <div class="writer" ng-hide="question.writer">...כותב לך</div>
+          </div>
+        </div>
+
+        <div class="row myrow" ng-show="{{question.questionType}}==1 && question.answerblock">
+          <div class = "col-md-10 col-md-offset-1 col-xs-12 text-center">
+            <div class="bubble-right">    
+              <div class="rating">
+                <a class="star" href="#" id="bottom"><i class="fa fa-star push"><sub>1</sub></i></a>
+                  <a href="#" class="star"><i class="fa fa-star" aria-hidden="true"><sub>2</sub></i></a>
+                  <a href="#" class="star"><i class="fa fa-star" aria-hidden="true"><sub>3</sub></i></a>
+                  <a  href="#" class="star"><i class="fa fa-star" aria-hidden="true"><sub>4</sub></i></a>
+                  <a href="#" class="star"><i class="fa fa-star" aria-hidden="true" aria-hidden="true"><sub>5</sub></i></a>
+                  <img class="ticks" ng-hide="question.ticks" src="img/ticks.png" alt="ticks">
+                </div>
+              </div>
+              <div class="writer" ng-hide="question.writer">...כותב לך</div>
+            </div>
+          </div>
+
+          <div class="row myrow" ng-show="{{question.questionType}}==2 && question.answerblock">
+            <div class = "col-md-10 col-md-offset-1 col-xs-12 text-center">
+              <div class="bubble-right">  
+                <div class="radio mycheck">
+                  <ul class="list-unstyled">
+                    <li ng-repeat="answer in question.answers">  {{ answer.title }} <label class="text-left"> 
+                        <input type="radio" name="question.id" value="{{ answer.id }}">
+                        <span style="color: transparent;">1</span>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" class="btn btn-primary btt" id="bottom">...הבא</button>
+              <img class="ticks" ng-hide="question.ticks" src="img/ticks.png" alt="ticks" >
+            </div>
+            <div class="writer" ng-hide="question.writer">...כותב לך</div>
+          </div>
+        </div>
+
+        <div class="row myrow" ng-show="{{question.questionType}}==3 && question.answerblock">
+          <div class = "col-md-10 col-md-offset-1 col-xs-12 text-center">
+            <div class="bubble-right">  
+              <div class="checkbox mycheck mycheckboxdiv">
+                <ul class="list-unstyled">
+                  <li ng-repeat="answer in question.answers">
+                    {{ answer.title }} <label> 
+                    <input type="checkbox" class="dropdown-checkbox mycheckbox" name="{{ question.id }}" value="{{ answer.id }}"><br/>
+                  </label>
+                </li>
+              </ul>
+            </div>
+            <button type="button" class="btn btn-primary btt" id="bottom">...הבא</button>
+            <img class="ticks" ng-hide="question.ticks" src="img/ticks.png" alt="ticks">
+          </div>
+          <div class="writer" ng-hide="question.writer">...כותב לך</div>
+        </div>
+      </div>
+
+      <div class="row myrow" ng-show="{{question.questionType}}==4 && question.answerblock">
+        <div class = "col-md-10 col-md-offset-1 col-xs-12 text-center">
+          <div class="bubble-right">  
+            <textarea class="form-control" rows="2" placeholder="...תכתוב פה"></textarea>
+            <button type="button" class="btn btn-primary btt" id="bottom">...הבא</button>
+            <img class="ticks" ng-hide="question.ticks" src="img/ticks.png" alt="ticks">
+          </div>
+          <div class="writer" ng-hide="question.writer">...כותב לך</div>
+        </div>
+      </div>
+    </div>
+    <div class="row myrow" ng-hide="true">
+      <div class = "col-md-10 col-md-offset-1 col-xs-12 text-center">
+        <div class="bubble-left">
+          <h1><bdo dir="rtl">תודה על תשומת הלב שלך!</bdo></h1>
+          <button type="button" class="btn btn-primary btt">
+            יציאה
+          </button>
+        </div>
+      </div>
+    </div>
+    <div>
+      <button type="button" class="closebutton"
+      data-toggle="tooltip" data-placement="bottom" title="יציאה"><i class="fa fa-times" aria-hidden="true"></i></button>
+    </div>
+  </div>
