@@ -1,69 +1,129 @@
- //Модель
-       var model={ id: 1, title: 'Questionary', createDate: 1474282449000, endDate: null, 
-       questions: [
-       { id: 1, title: 'Hello. Could you answer a few question?', template: false, answers: [], percentToAlert: 0.0, questionType: 0 },
-       { id: 2, title: 'How do you rate our service?', template: false, answers: [
-       { id: 1, title: '1', nextQuestionIndex: 3, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 2, title: '2', nextQuestionIndex: 3, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 3, title: '3', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 4, title: '4', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 5, title: '5', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 }], percentToAlert: 60.0, questionType: 1 },
-       { id: 2, title: 'How do you rate our service?', template: false, answers: [
-       { id: 1, title: '1', nextQuestionIndex: 3, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 2, title: '2', nextQuestionIndex: 3, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 3, title: '3', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 4, title: '4', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 5, title: '5', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 }], percentToAlert: 60.0, questionType: 1 },
-       { id: 2, title: 'How do you rate our service?', template: false, answers: [
-       { id: 1, title: '1', nextQuestionIndex: 3, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 2, title: '2', nextQuestionIndex: 3, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 3, title: '3', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 4, title: '4', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 5, title: '5', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 }], percentToAlert: 60.0, questionType: 1 },
-       { id: 2, title: 'How do you rate our service?', template: false, answers: [
-       { id: 1, title: '1', nextQuestionIndex: 3, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 2, title: '2', nextQuestionIndex: 3, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 3, title: '3', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 4, title: '4', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 5, title: '5', nextQuestionIndex: 2, quota: 0.0, throwALert: false, usersRespondented: 0 }], percentToAlert: 60.0, questionType: 1 },
-       { id: 3, title: 'You\'ve got all the answers to your questions', template: false, answers: [
-       { id: 6, title: 'Yes', nextQuestionIndex: -1, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 7, title: 'No', nextQuestionIndex: 4, quota: 0.0, throwALert: false, usersRespondented: 0 }], percentToAlert: 0.0, questionType: 2 },
-       { id: 3, title: 'You\'ve got all the answers to your questions', template: false, answers: [
-       { id: 6, title: 'Yes', nextQuestionIndex: -1, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 7, title: 'No', nextQuestionIndex: 4, quota: 0.0, throwALert: false, usersRespondented: 0 }], percentToAlert: 0.0, questionType: 2 },
-       { id: 4, title: 'What are you dissatisfied?', template: false, answers: [
-       { id: 8, title: 'Worker was rude', nextQuestionIndex: 4, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 9, title: 'Worker was rude', nextQuestionIndex: 4, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 10, title: 'Worker was rude', nextQuestionIndex: 0, quota: 0.0, throwALert: false, usersRespondented: 0 }], percentToAlert: 0.0, questionType: 3 },
-       { id: 4, title: 'What are you dissatisfied?', template: false, answers: [
-       { id: 8, title: 'Worker was rude', nextQuestionIndex: 4, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 9, title: 'Worker was rude', nextQuestionIndex: 4, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 10, title: 'Worker was rude', nextQuestionIndex: 0, quota: 0.0, throwALert: false, usersRespondented: 0 }], percentToAlert: 0.0, questionType: 3 },
-       { id: 4, title: 'What are you dissatisfied?', template: false, answers: [
-       { id: 8, title: 'Worker was rude', nextQuestionIndex: 4, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 9, title: 'Worker was rude', nextQuestionIndex: 4, quota: 0.0, throwALert: false, usersRespondented: 0 },
-       { id: 10, title: 'Worker was rude', nextQuestionIndex: 0, quota: 0.0, throwALert: false, usersRespondented: 0 }], percentToAlert: 0.0, questionType: 3 },
-       { id: 5, title: 'Please tell us more', template: false, answers: [], percentToAlert: 0.0, questionType: 4 },],
-       statistics: { usersIntroduced: 1500, usersReceivedSms: 1000, usersRespondented: 500, usersDidnotAnswerAll: 59, alertsStarted: 0, responseRate: 0 }
-     }
+      //Модель - ответ
+      function Answers(allAnswers, answersSet){
+        this.allAnswers = allAnswers;
+        this.answersSet = answersSet;
+      }
 
-        //Модуль - точка входа
-       var questionaryApp = angular.module("questionaryApp",[]);
+      //Модуль - точка входа
+      var questionaryApp = angular.module("questionaryApp",[]);
 
-       // Контроллер
-       questionaryApp.controller('QuestionsCtrl', function($scope){
-         $scope.questionary = model;
-         $scope.url = 'app/questions/question.html';
+      // Контроллер
+       questionaryApp.controller('QuestionsCtrl', function($scope, $http, $timeout){
+       $scope.url = 'app/questions/question.html';
 
-         $scope.question = $scope.questionary.questions[0];
-         $scope.question.answerblock = true;
-         $scope.question.writer  = true;
-         $scope.question.ticks  = true;
+         //$http.get('https://panel-repatriation.rhcloud.com/surveyuser/getSurvey/smk2')
+         $http.get('app/datafolder/data.json')
+         .then(function(response) { 
+          $scope.questionary = response.data;
+          $scope.counter = 0;
+          $scope.questnext = $scope.questionary.questions[$scope.counter];
+          $scope.questnext.questShow = true;
+          var promiseObj = $timeout(function(){
+            $scope.questnext.answerblock = true;
+            return $scope.questnext.answerblock;
+          }, 1000);
+          $scope.questnext.writer  = true;
+          $scope.questnext.ticks  = true;
 
-         $scope.showNextQuestion = function(event){
-            console.log(event);
-         }
+     
+       // Ответы на вопросы
+        var allAnswers = false;
+        var answersSet = new Array();
+        $scope.answersmodel = new Answers (allAnswers, answersSet);
+        $scope.answersmodel.answerSet = new Array;
+
+
+        // Clik - answer - type 0, 1
+        $scope.showNextQuestion = function (result, next){
+          console.log(result);
+         var promiseObj1 = $timeout(function(){
+           $scope.questnext.ticks  = false; 
+           return $scope.questnext.ticks
+         }, 1000);
+          var promiseObj2 = $timeout(function(){
+           $scope.questnext.writer  = false;
+           return $scope.questnext.writer;
+         }, 2000);
+          var promiseObj3 = $timeout(function(){
+           $scope.questnext.writer  = true;
+           return $scope.questnext.writer;
+         }, 3000);
+          var promiseObj4 = $timeout(function(){
+           nextQuestionShow(next);
+         }, 4000);
+        }
+
+        // Clik - answer - type 3
+        $scope.showNextQuestionCheck = function(){
+         var promiseObj1 = $timeout(function(){
+           $scope.questnext.ticks  = false; 
+           return $scope.questnext.ticks
+         }, 1000);
+         var promiseObj2 = $timeout(function(){
+           $scope.questnext.writer  = false;
+           return $scope.questnext.writer;
+         }, 2000);
+         var promiseObj3 = $timeout(function(){
+           $scope.questnext.writer  = true;
+           return $scope.questnext.writer;
+         }, 3000);
+         $scope.counter=$scope.counter+2;
+         var promiseObj4 = $timeout(function(){
+           nextQuestionShow($scope.counter);
+         }, 4000);
+       }
+
+        // Clik - answer - type 4
+        $scope.showNextQuestionText = function(textanswer){
+          var promiseObj1 = $timeout(function(){
+           $scope.questnext.ticks  = false; 
+           return $scope.questnext.ticks
+         }, 1000);
+          var promiseObj2 = $timeout(function(){
+           $scope.questnext.writer  = false;
+           return $scope.questnext.writer;
+         }, 2000);
+          var promiseObj3 = $timeout(function(){
+           $scope.questnext.writer  = true;
+           return $scope.questnext.writer;
+         }, 3000);
+          $scope.counter=$scope.counter+2;
+          var promiseObj4 = $timeout(function(){
+            if ($scope.counter<0||$scope.counter>=$scope.questionary.questions.lenght){
+              console.log('stop'); return;
+            }
+            nextQuestionShow($scope.counter);
+          }, 4000);
+          console.log(textanswer);
+        }
+
+        var nextQuestionShow = function(next){
+
+          if (next==0) {
+            $scope.counter = $scope.counter+1;
+            $scope.questnext = $scope.questionary.questions[$scope.counter];
+            $scope.questnext.questShow = true;
+            var promiseObj = $timeout(function(){
+              $scope.questnext.answerblock = true;
+              return $scope.questnext.answerblock;
+            }, 1000);
+            $scope.questnext.writer  = true;
+            $scope.questnext.ticks  = true;
+          }
+          else {
+
+            $scope.questnext = $scope.questionary.questions[next]; 
+            $scope.questnext.questShow = true; 
+            var promiseObj = $timeout(function(){
+              $scope.questnext.answerblock = true;
+              return $scope.questnext.answerblock;
+            }, 1000);
+            $scope.questnext.writer  = true;
+            $scope.questnext.ticks  = true;
+          }
+        }
+
       });
+ });
 
 
